@@ -14,9 +14,10 @@ class AccountMove(models.Model):
     def _compute_profit_margin(self):
         for rec in self:
             rec.cost_amount = sum(rec.invoice_line_ids.mapped('cost_amount'))
-            rec.price  = sum(rec.invoice_line_ids.mapped('price'))
-            rec.profit = sum(rec.invoice_line_ids.mapped('profit'))
-            rec.margin = (rec.profit / rec.amount_untaxed) * 100 if rec.amount_untaxed else 0
+            rec.price     = sum(rec.invoice_line_ids.mapped('price'))
+            rec.discount  = sum(rec.invoice_line_ids.mapped('price'))
+            rec.profit    = sum(rec.invoice_line_ids.mapped('profit'))
+            rec.margin    = (rec.profit / rec.amount_untaxed) * 100 if rec.amount_untaxed else 0
 
 
 class AccountMoveLine(models.Model):
@@ -24,6 +25,7 @@ class AccountMoveLine(models.Model):
 
     cost_amount = fields.Float(string="Cost Amount", compute="_custom_compute_cost_amount", digits=(16, 2))
     price = fields.Float(string="Price", compute="_custom_compute_cost_amount", digits=(16, 2))
+    discount = fields.Float(string="Discount", compute="_custom_compute_cost_amount", digits=(16, 2))
     profit = fields.Float(string="Profit", compute="_compute_profit_margin", store=False, digits=(16, 2))
     margin = fields.Float(string="Margin", compute="_compute_profit_margin", store=False, digits=(16, 2))
 
@@ -32,6 +34,7 @@ class AccountMoveLine(models.Model):
         for rec in self:
             rec.cost_amount = rec.product_id.standard_price * rec.quantity
             rec.price       = rec.price_unit * rec.quantity
+            rec.discount    = rec.discount * rec.price
 
     @api.depends('cost_amount', 'product_id', 'product_id.standard_price')
     def _compute_profit_margin(self):
