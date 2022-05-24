@@ -17,6 +17,12 @@
                                 <th>Fecha Factura</th>
                                 <th>Factura #</th>
                                 <th>Cliente</th>
+                                <th>RFC</th>
+                                <th>Folio Fiscal</th>
+                                <th>Precio Venta</th>
+                                <th>Descuento</th>
+                                <th>Impuesto</th>
+                                <th>Total con Signo</th>
                                 <th>Importe</th>
                                 <th>Costo</th>
                                 <th>Beneficio</th>
@@ -30,6 +36,7 @@
                                     <td><span t-field="data.invoice_date"/></td>
                                     <td><span t-field="data.name"/></td>
                                     <td><span t-field="data.partner_id"/></td>
+                                    <td><span t-field="data.partner_id.vat"/></td>
                                     <td><span t-field="data.amount_untaxed"/></td>
                                     <td><span t-field="data.cost_amount"/></td>
                                     <td><span t-field="data.profit"/></td>
