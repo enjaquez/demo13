@@ -31,7 +31,7 @@ class AccountMoveLine(models.Model):
     def _custom_compute_cost_amount(self):
         for rec in self:
             rec.cost_amount = rec.product_id.standard_price * rec.quantity
-            rec.price       = rec.product_id.standard_price
+            rec.price       = rec.product_id.standard_price * rec.price_unit
 
     @api.depends('cost_amount', 'product_id', 'product_id.standard_price')
     def _compute_profit_margin(self):
