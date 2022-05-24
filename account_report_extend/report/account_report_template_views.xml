@@ -37,6 +37,7 @@
                                     <td><span t-field="data.name"/></td>
                                     <td><span t-field="data.partner_id"/></td>
                                     <td><span t-field="data.partner_id.vat"/></td>
+                                    <td><span t-field="data.l10n_mx_edi_cfdi_uuid"/></td>
                                     <td><span t-field="data.amount_untaxed"/></td>
                                     <td><span t-field="data.cost_amount"/></td>
                                     <td><span t-field="data.profit"/></td>
