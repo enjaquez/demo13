@@ -17,8 +17,8 @@ msgstr ""
 
 #. module: muk_utils
 #: model_terms:ir.ui.view,arch_db:muk_utils.res_config_settings_view_form
-msgid "<strong>Save</strong> this page before triggering the migration."
-msgstr "<strong>Save</strong> esta página antes de iniciar la migración."
+msgid "Account Report"
+msgstr "Reporte de Facturación"
 
 
 #. module: muk_utils

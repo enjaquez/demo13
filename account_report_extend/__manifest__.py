@@ -3,7 +3,7 @@
     "name": "Account Report Extend",
     "summary": """
         Account Report Extend
-        Reporte de Contabilidad Extendido
+        Reporte de Facturación
     """,
     "version": "13.0.1.0.0",
     "category": "Account",
