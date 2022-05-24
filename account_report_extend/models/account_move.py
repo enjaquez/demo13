@@ -16,7 +16,7 @@ class AccountMove(models.Model):
         for rec in self:
             rec.cost_amount = sum(rec.invoice_line_ids.mapped('cost_amount'))
             rec.price     = sum(rec.invoice_line_ids.mapped('price'))
-            rec.discount  = sum(rec.invoice_line_ids.mapped('price'))
+            rec.discount  = sum(rec.invoice_line_ids.mapped('discount'))
             rec.profit    = sum(rec.invoice_line_ids.mapped('profit'))
             rec.margin    = (rec.profit / rec.amount_untaxed) * 100 if rec.amount_untaxed else 0
 
