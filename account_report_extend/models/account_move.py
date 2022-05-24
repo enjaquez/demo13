@@ -7,6 +7,7 @@ class AccountMove(models.Model):
 
     cost_amount = fields.Float(string="Cost Amount", compute="_compute_profit_margin", store=False, digits=(16, 2))
     price = fields.Float(string="Price", compute="_compute_profit_margin", store=False, digits=(16, 2))
+    discount = fields.Float(string="Discount", compute="_compute_profit_margin", store=False, digits=(16, 2))
     profit = fields.Float(string="Profit", compute="_compute_profit_margin", store=False, digits=(16, 2))
     margin = fields.Float(string="Margin", compute="_compute_profit_margin", store=False, digits=(16, 2))
 
