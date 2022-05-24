@@ -40,7 +40,7 @@
                                     <td><span t-field="data.l10n_mx_edi_cfdi_uuid"/></td>
                                     <td><span t-field="data.price"/></td>
                                     <td><span t-field="data.discount"/></td>
-
+                                    <td><span t-field="data.amount_tax"/></td>
                                     <td><span t-field="data.amount_untaxed"/></td>
                                     <td><span t-field="data.cost_amount"/></td>
                                     <td><span t-field="data.profit"/></td>
