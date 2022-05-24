@@ -6,10 +6,10 @@ from openerp.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 class AccounutReportWizard(models.TransientModel):
     _name = "account.report.wizard"
-    _description = "Account Report"
+    _description = "Reporte de Facturación"
 
-    start_date = fields.Date(string="Start Date", required=True)
-    end_date = fields.Date(string="End Date", required=True)
+    start_date = fields.Date(string="Fecha Inicial : ", required=True)
+    end_date = fields.Date(string="Fecha Final : ", required=True)
 
     def action_get_report_values(self):
         return self.env.ref('account_report_extend.action_report_account_report').report_action(self)

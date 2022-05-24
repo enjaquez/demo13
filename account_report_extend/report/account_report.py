@@ -4,7 +4,7 @@ from odoo import models, fields, api, _
 
 class ReportInvoiceWithPayment(models.AbstractModel):
     _name = 'report.account_report_extend.report_account_report'
-    _description = 'Account report'
+    _description = 'Reporte de Facturación'
 
     @api.model
     def _get_report_values(self, docids, data=None):

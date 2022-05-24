@@ -30,7 +30,7 @@
     </record>
 
     <record id='account_report_wizard_action' model='ir.actions.act_window'>
-        <field name="name">Account Report</field>
+        <field name="name">Reporte de Facturación</field>
         <field name="res_model">account.report.wizard</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">form</field>
@@ -39,7 +39,7 @@
     </record>
 
     <menuitem id="sale_order_confirm_wizard_menu"
-              name="Account Report"
+              name="Reporte de Facturación"
               parent="account.menu_finance_reports"
               action="account_report_wizard_action"/>
 
