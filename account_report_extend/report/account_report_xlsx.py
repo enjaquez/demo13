@@ -6,27 +6,25 @@ PAYMENT_STATE = {
     'paid': 'paid'
 }
 
-
-
 class AccountReportXlsx(models.AbstractModel):
     _name = "report.account_report_extend.report_account_report_excel"
     _inherit = "report.report_xlsx.abstract"
-    _description = "Account Report Report"
+    _description = "Reporte de Facturación"
 
     def generate_xlsx_report(self, workbook, data, wizard):
-        sheet = workbook.add_worksheet("Account Report")
+        sheet = workbook.add_worksheet("Reporte Facturas")
         i = 0
         j = 0
 
         TABLE_HEADER = [
-            _('Invoice Date'),
-            _('Name'),
-            _('Customer'),
-            _('Tax Excluded'),
-            _('Cost'),
-            _('Profit'),
-            _('Margin %'),
-            _('Payment Status')
+            _('Fecha Factura'),
+            _('Facrtura #'),
+            _('Cliente'),
+            _('Importe'),
+            _('Costo'),
+            _('Beneficio'),
+            _('Margen %'),
+            _('Estado del Pago')
         ]
 
         move_data = wizard._get_move_data_report_values()

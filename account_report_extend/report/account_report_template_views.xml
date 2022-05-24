@@ -8,20 +8,20 @@
         <t t-call="web.external_layout">
             <t t-foreach="doc" t-as="o">
                 <div class="mb-2 ml-1 mt-2 row">
-                    Date : From <span class="ml-2 mr-2" t-field="o.start_date"/> to <span class="ml-2 mr-2"  t-field="o.end_date"/>
+                    Fecha del Reporte : De <span class="ml-2 mr-2" t-field="o.start_date"/> hasta <span class="ml-2 mr-2"  t-field="o.end_date"/>
                 </div>
                 <div class="page">
                     <table class="table table-sm o_main_table">
                         <thead style="display: table-row-group">
                             <tr>
-                                <th>Invoice Date</th>
-                                <th>Name</th>
-                                <th>Customer</th>
-                                <th>Tax Excluded</th>
-                                <th>Cost</th>
-                                <th>Profit</th>
-                                <th>Margin %</th>
-                                <th>Payment Status</th>
+                                <th>Fecha Factura</th>
+                                <th>Factura #</th>
+                                <th>Cliente</th>
+                                <th>Importe</th>
+                                <th>Costo</th>
+                                <th>Beneficio</th>
+                                <th>Margen %</th>
+                                <th>Estado del Pago</th>
                             </tr>
                         </thead>
                         <tbody>
