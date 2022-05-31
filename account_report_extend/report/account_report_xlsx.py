@@ -47,7 +47,7 @@ class AccountReportXlsx(models.AbstractModel):
             j += 1
             sheet.write(i, j, m.name or '', '')
             j += 1
-            sheet.write(i, j, str(m.partner_id), '')
+            sheet.write(i, j, str(m.partner_id.name), '')
             j += 1
             sheet.write(i, j, str(m.partner_id.vat), '')
             j += 1
