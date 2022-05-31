@@ -47,11 +47,11 @@ class AccountReportXlsx(models.AbstractModel):
             j += 1
             sheet.write(i, j, m.name or '', '')
             j += 1
-            sheet.write(i, j, m.partner_id or '', '')
+            sheet.write(i, j, str(m.partner_id), '')
             j += 1
-            sheet.write(i, j, m.partner_id.vat or '', '')
+            sheet.write(i, j, str(m.partner_id.vat), '')
             j += 1
-            sheet.write(i, j, m.l10n_mx_edi_cfdi_uuid or '', '')
+            sheet.write(i, j, str(m.l10n_mx_edi_cfdi_uuid), '')
             j += 1
             sheet.write(i, j, m.price, '')
             j += 1
