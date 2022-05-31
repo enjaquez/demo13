@@ -18,8 +18,14 @@ class AccountReportXlsx(models.AbstractModel):
 
         TABLE_HEADER = [
             _('Fecha Factura'),
-            _('Facrtura #'),
+            _('Factura #'),
             _('Cliente'),
+            _('RFC'),
+            _('Folio Fiscal'),
+            _('Precio Venta'),
+            _('Descuento'),
+            _('Impuesto'),
+            _('Total con Signo'),
             _('Importe'),
             _('Costo'),
             _('Beneficio'),
@@ -41,7 +47,19 @@ class AccountReportXlsx(models.AbstractModel):
             j += 1
             sheet.write(i, j, m.name or '', '')
             j += 1
-            sheet.write(i, j, m.partner_id.name or '', '')
+            sheet.write(i, j, m.partner_id or '', '')
+            j += 1
+            sheet.write(i, j, m.partner_id.vat or '', '')
+            j += 1
+            sheet.write(i, j, m.l10n_mx_edi_cfdi_uuid or '', '')
+            j += 1
+            sheet.write(i, j, m.price, '')
+            j += 1
+            sheet.write(i, j, m.discount, '')
+            j += 1
+            sheet.write(i, j, m.amount_tax, '')
+            j += 1
+            sheet.write(i, j, m.amount_untaxed_signed, '')
             j += 1
             sheet.write(i, j, m.amount_untaxed, '')
             j += 1
