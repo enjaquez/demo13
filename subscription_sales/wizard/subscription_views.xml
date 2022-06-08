@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_sales_leaderboard_report_pivot" model="ir.ui.view">
+         <field name="name">sales.leaderboard.report.pivot</field>
+         <field name="model">subscription.budget.wizard</field>
+         <field name="arch" type="xml">
+             <form>
+                <div class="alert alert-warning">
+                    This amount has send to budget line that match with your current month.
+                    
+                    <ul>
+                        <li>Only active subscriptions will be considered</li>
+                        <li>Only subscriptions are considered where the date of the next invoice is from the current month</li>
+                    </ul>
+                </div>
+                <group>
+                    <group>
+                        <field name="budget_id"/>
+                        <field name="date_from_affect"/>
+                        <field name="date_to_affect"/>
+                        <field name="to_sent"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Send to budget" name="send_to_budget" type='object' class='oe_highlight'/>
+                    <button special="cancel" string="Cancel" type="object" class="btn btn-secondary oe_inline" />
+                </footer>
+             </form>
+         </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="subscription_budget_action">
+        <field name="name">Subscription Budget</field>
+        <field name="res_model">subscription.budget.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="sales_leaderboard_menu"
+    name="Subscription Budget"
+    parent="sale_subscription.menu_sale_subscription"
+    action="subscription_budget_action"/>
+</odoo>

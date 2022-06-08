@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_load_data_telcel,load_data.telcel,model_load_data_telcel,,1,1,1,1
+access_data_telcel_result,data_telcel.result,model_data_telcel_result,,1,1,1,1
+access_data_odoo_result,data_odoo.result,model_data_odoo_result,,1,1,1,1
+access_load_data_numeros_telcel,load_data_numeros.telcel,model_load_data_numeros_telcel,,1,1,1,1

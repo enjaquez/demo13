@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+  	<!--Tree-->
+    <record id="load_data_telcel_numeros_tree"   model="ir.ui.view">
+        <field name="name">load_data.telcel.numeros.tree</field>
+        <field name="model">load_data_numeros.telcel</field>
+        <field name="code">seq.seq</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+           <tree>
+                 <field name="numero_tel"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="load_data_telcel_numeros_search">
+      <field name="name">load_data.telcel.numeros.search</field>
+      <field name="model">load_data_numeros.telcel</field>
+      <field name="arch" type="xml">
+        <search string="Busqueda datos telcel">
+              <field name="numero_tel"/>
+        </search>
+      </field>
+    </record>
+
+  </data>
+</odoo>

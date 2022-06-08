@@ -1,0 +1,36 @@
+<odoo>
+  <data>
+  	<!--Tree-->
+    <record id="plataforma_data_tree"   model="ir.ui.view">
+        <field name="name">plataforma.data.tree</field>
+        <field name="model">data.plataforma</field>
+        <field name="code">seq.seq</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                 <field name="name"/>
+                 <field name="imei" string="Serie/Imei"/>
+                  <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--search-->
+  <record model="ir.ui.view" id="data_plataforma_search">
+    <field name="name">data_plataforma.search</field>
+    <field name="model">data.plataforma</field>
+    <field name="arch" type="xml">
+      <search string="Busqueda en plataforma">
+        <field name="name"/>
+        <field name="imei"/>
+        <field name="create_date"/>
+        <separator/>
+        <group expand="0" string="comparado">
+          <filter string="comparado el" name="create_date" context="{'group_by':'create_date'}"/>
+        </group>
+      </search>
+    </field>
+  </record>
+
+  </data>
+</odoo>

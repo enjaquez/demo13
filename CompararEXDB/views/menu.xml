@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+      <!--menu pricipal-->
+       <record model="ir.actions.act_window" id="comparar_data_odoo">
+        <field name="name">Comparar datos</field>
+        <field name="res_model">data.data_load</field>
+        <field name="view_mode">tree</field>
+      </record>
+      <!--accion para cargar datos-->
+      <record model="ir.actions.act_window" id="cargar_data_odoo">
+       <field name="name">Cargar datos</field>
+       <field name="res_model">data.data_load</field>
+       <field name="view_mode">tree</field>
+     </record>
+      <!--accion para la comparacion con odoo-->
+      <record model="ir.actions.act_window" id="action_odoo_data">
+          <field name="name">Diferencia en odoo</field>
+          <field name="res_model">data.odoo</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree</field>
+      </record>
+     <!--accion para la compracion con diferencia con excel-->
+      <record model="ir.actions.act_window" id="action_excel_data">
+          <field name="name">Diferencia en excel</field>
+          <field name="res_model">data.plataforma</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree</field>
+      </record>
+      <!--accion para las estadisticas-->
+      <record model="ir.actions.act_window" id="action_estadisticas">
+          <field name="name">Estadisticas</field>
+          <field name="res_model">estadisticas.data_load</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+      </record>
+
+
+       <menuitem
+   		 	name="Comparar"
+   		 	id="base_comparar_data"
+   		 	parent="gpsmonitor.main_menu_gps"
+   		 	action="comparar_data_odoo"
+        />
+        <menuitem
+           action="cargar_data_odoo"
+           id="action_cargar_data"
+           parent="base_comparar_data"
+           name="Cargar Datos"
+           sequence="1"
+           />
+
+        <menuitem
+           action="action_odoo_data"
+           id="action_odoo_data_dif"
+           parent="base_comparar_data"
+           name="Ver Excel Dif odoo"
+           sequence="2"
+           />
+           <menuitem
+             action="action_excel_data"
+             id="action_excel_data_dif"
+             parent="base_comparar_data"
+             name="Ver Odoo Dif Excel"
+             sequence="3"/>
+             <menuitem
+               action="action_estadisticas"
+               id="action_estadisticas_datas"
+               parent="base_comparar_data"
+               name="Estadisticas de Comparar"
+               sequence="4"/>
+
+  </data>
+</odoo>

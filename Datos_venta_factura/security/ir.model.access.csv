@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_factura_factura,invoice.type.pag,Datos_venta_factura.model_invoice_type_pag,,1,1,1,1
+
+
+

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo_kpis_odoo_kpis_ing,odoo_kpis.ing,odoo_kpis.ing,1,1,1,1,1
+access_odoo_kpis_odoo_kpis_crm,odoo_kpis.crm,odoo_kpis.crm,1,1,1,1,1

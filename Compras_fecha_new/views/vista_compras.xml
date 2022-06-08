@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- agregar campos de fecha programada-->
+        <record model="ir.ui.view" id="fechas_programada_form_inherited">
+            <field name="name">fechas.programada.form.inherited</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+        		<xpath expr="//field[@name='partner_bank_id']" position="after">
+                <field name="fechas_programada"/>
+            </xpath>
+            </field>
+        </record>
+        <!-- agregar campo de fechas programada -->
+        <record model="ir.ui.view" id="fechas_programada_tree_inherited">
+            <field name="name">fechas.programada.tree.inherited</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+            <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_invoice']" position="after">
+                <field name="fechas_programada"/>
+            </xpath>
+            </field>
+        </record>
+        <!--vista seach-->
+         <record id="fechas_programada_search_inherited" model="ir.ui.view">
+          <field name="name">fechas_programada_search_inherited</field>
+          <field name="model">account.invoice</field>
+          <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+          <field name="arch" type="xml">
+              <xpath expr="//field[@name='partner_id']" position="before">
+                <field name="fechas_programada"/>
+                <separator/>
+                <group expand="0" string="Fechas programada">
+                  <filter string="Fechas programada" name="Fecha programada" context="{'group_by':'fechas_programada'}"/>
+                </group>
+                <separator/>
+              </xpath>
+          </field>
+         </record>
+
+    </data>
+</odoo>

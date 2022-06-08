@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_sale_subscription_paymentterm_form" model="ir.ui.view">
+            <field name="name">sale.subscription.form.view</field>
+            <field name="model">sale.subscription</field>
+            <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form" />
+            <field name="arch" type="xml">
+                <field name="date_start" position="after">
+                    <field name="payment_term_id"/>
+                </field>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

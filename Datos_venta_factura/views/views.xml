@@ -1,0 +1,21 @@
+<odoo>
+  <data>  
+  <record id="view_parter_form_inheriti" model="ir.ui.view">
+    <field name="name">view.parter.form.inheriti</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml"> 
+           <xpath expr="//field[@name='property_payment_term_id']" position="after">
+          <field name="Metodos_pago" string="Forma de pagar"/>
+        </xpath>  
+         <xpath expr="//field[@name='Metodos_pago']" position="after">
+          <field name="tipo_factura" string="Metodo de pago"/>
+        </xpath>
+         <xpath expr="//field[@name='tipo_factura']" position="after">
+          <field name="fields_selection" string="Uso"/>
+        </xpath>  
+
+    </field> 
+   </record>      
+  </data> 
+</odoo>

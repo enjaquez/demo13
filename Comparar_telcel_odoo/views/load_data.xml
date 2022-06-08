@@ -1,0 +1,38 @@
+<odoo>
+  <data>
+  	<!--Tree-->
+    <record id="load_data_telcel_tree"   model="ir.ui.view">
+        <field name="name">load_data.telcel.tree</field>
+        <field name="model">load_data.telcel</field>
+        <field name="code">seq.seq</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+           <tree>
+                 <field name="numero_tel"/>
+                 <field name="consepto_MB"/>
+                 <field name="consumido"/>
+                 <field name="excedente"/>
+                 <field name="gran_total"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="load_data_telcel_search">
+      <field name="name">load_data.telcel.search</field>
+      <field name="model">load_data.telcel</field>
+      <field name="arch" type="xml">
+        <search string="Busqueda datos telcel">
+              <field name="numero_tel"/>
+              <field name="consepto_MB"/>
+              <field name="consumido"/>
+              <field name="excedente"/>
+              <field name="gran_total"/>
+              <group string="Group By">
+                <filter name="Concepto" string="Concepto" domain="[]"  context="{'group_by':'consepto_MB'}"/>
+              </group>
+        </search>
+      </field>
+    </record>
+
+  </data>
+</odoo>

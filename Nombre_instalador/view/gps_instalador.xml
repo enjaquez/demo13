@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+    <record id="gps_form_instalador_inheriti" model="ir.ui.view">
+      <field name="name">gps_form_instalador_inheriti</field>
+      <field name="model">auto.paquet.servicio</field>
+      <field name="inherit_id" ref="gpsmonitor.servicio_autos_form"/>
+      <field name="arch" type="xml">
+           <xpath expr="//field[@name='instalado']" position="after">
+             <field name="instaladores"/>
+            </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

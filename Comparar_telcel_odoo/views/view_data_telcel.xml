@@ -1,0 +1,32 @@
+<odoo>
+  <data>
+  	<!--Tree-->
+    <record id="data_telcel_telcel_tree"   model="ir.ui.view">
+        <field name="name">data.odoo odoo.tree</field>
+        <field name="model">data_telcel.result</field>
+        <field name="code">seq.seq</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+           <tree>
+              <field name="proveedor"/>
+              <field name="numero_tel"/>
+              <field name="serie"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="data_telcel_telcel_search">
+      <field name="name">data.telcel telcel.search</field>
+      <field name="model">data_telcel.result</field>
+      <field name="arch" type="xml">
+        <search string="Busqueda datos telcel">
+              <field name="numero_tel"/>
+              <group string="Group By">
+                <filter name="En odoo" string="En odoo" domain="[]"  context="{'group_by':'numero_tel'}"/>
+              </group>
+        </search>
+      </field>
+    </record>
+
+  </data>
+</odoo>

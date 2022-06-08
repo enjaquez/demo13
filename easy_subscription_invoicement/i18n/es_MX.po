@@ -1,0 +1,170 @@
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Returns, discounts or bonuses"
+msgstr "Devoluciones, descuentos o bonificaciones"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Acquisition of merchandise"
+msgstr "Adquisición de mercancías"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "General expenses"
+msgstr "Gastos en general"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Constructions"
+msgstr "Construcciones"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Office furniture and equipment investment"
+msgstr "Mobilario y equipo de oficina por inversiones"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Transportation equipment"
+msgstr "Equipo de transporte"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Computer equipment and accessories"
+msgstr "Equipo de cómputo y accesorios"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Dices, dies, molds, matrices and tooling"
+msgstr "Dados, troqueles, moldes, matrices y herramental"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Telephone communications"
+msgstr "Comunicaciones telefónicas"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Satellite communications"
+msgstr "Comunicaciones satelitales"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Other machinery and equipment"
+msgstr "Otra maquinaria y equipo"
+
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Medical, dental and hospital expenses."
+msgstr "Honorarios médicos, dentales y gastos hospitalarios"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Medical expenses for disability"
+msgstr "Gastos médicos por incapacidad o discapacidad"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Funeral expenses"
+msgstr "Gastos funerales"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Donations"
+msgstr "Donativos"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Real interest effectively paid for mortgage loans (room house)"
+msgstr "Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación)."
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Voluntary contributions to SAR"
+msgstr "Aportaciones voluntarias al SAR."
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Medical insurance premiums"
+msgstr "Primas por seguros de gastos médicos"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Mandatory School Transportation Expenses"
+msgstr "Gastos de transportación escolar obligatoria."
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Deposits in savings accounts, premiums based on pension plans."
+msgstr "Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones."
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "Payments for educational services (Colegiatura)"
+msgstr "Pagos por servicios educativos (colegiaturas)"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,usage:0
+msgid "To define"
+msgstr "Por definir"
+
+#. module: easy_subscription_invoicement
+#: model_terms:ir.ui.view,arch_db:easy_subscription_invoicement.view_partner_fiscal_information_form
+msgid "Fiscal Information"
+msgstr "Información Fiscal"
+
+#. module: easy_subscription_invoicement
+#: model:ir.model.fields,field_description:easy_subscription_invoicement.field_res_partner__payment_policy
+msgid "Payment Policy"
+msgstr "Metodo de pago"
+
+#. module: easy_subscription_invoicement
+#: model:ir.model.fields,field_description:easy_subscription_invoicement.field_res_partner__method_id
+msgid "Payment Way"
+msgstr "Forma de pago"
+
+#. module: easy_subscription_invoicement
+#: model:ir.model.fields,field_description:easy_subscription_invoicement.field_res_partner__usage
+msgid "Usage"
+msgstr "Uso CFDI"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,payment_policy:0
+msgid "Single exhibition payment"
+msgstr "Pago en una sola exhibición"
+
+#. module: easy_subscription_invoicement
+#: selection:res.partner,payment_policy:0
+msgid "Blases payment"
+msgstr "Pago en parcialidades o diferido"
+
+#. module: easy_subscription_invoicement
+#: selection:account.invoice,payment_policy:0
+msgid "Single exhibition payment"
+msgstr "Pago en una sola exhibición"
+
+#. module: easy_subscription_invoicement
+#: selection:account.invoice,payment_policy:0
+msgid "Blases payment"
+msgstr "Pago en parcialidades o diferido"
+
+#. module: easy_subscription_invoicement
+#: model:ir.model.fields,field_description:easy_subscription_invoicement.field_account_invoice__payment_policy
+msgid "Payment Policy"
+msgstr "Metodo de pago"
+
+#. module: easy_subscription_invoicement
+#: model:ir.model.fields,field_description:easy_subscription_invoicement.field_sale_subscription__next_payment_date
+msgid "Next Payment Day"
+msgstr "Fecha para cobro"
+
+#. module: easy_subscription_invoicement
+#: model_terms:ir.ui.view,arch_db:easy_subscription_invoicement.view_sale_subscription_inherit_search
+msgid "Within Payment Day"
+msgstr "En fecha de cobro"
+
+#. module: easy_subscription_invoicement
+#: model_terms:ir.ui.view,arch_db:easy_subscription_invoicement.subscription_form_view
+msgid "Calculate next payment date"
+msgstr "Actualizar fechas de cobro"

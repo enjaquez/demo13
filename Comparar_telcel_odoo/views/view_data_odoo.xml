@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+  	<!--Tree-->
+    <record id="data_odoo_odoo_tree"   model="ir.ui.view">
+        <field name="name">data.odoo odoo.tree</field>
+        <field name="model">data_odoo.result</field>
+        <field name="code">seq.seq</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+           <tree>
+              <field name="numero_tel"/>            
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="data_odoo_odoo_search">
+      <field name="name">data.odoo odoo.search</field>
+      <field name="model">data_odoo.result</field>
+      <field name="arch" type="xml">
+        <search string="Busqueda datos telcel">
+              <field name="numero_tel"/>
+        </search>
+      </field>
+    </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,31 @@
+<odoo>
+  <data>
+  	<!--Tree-->
+    <record id="Load_data_tree"   model="ir.ui.view">
+        <field name="name">Load.data.tree</field>
+        <field name="model">data.data_load</field>
+        <field name="code">seq.seq</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+
+            <tree>
+                 <field name="name"/>
+                 <field name="imel" string="IMEI/serie"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="Load_data_search">
+      <field name="name">Load_data.search</field>
+      <field name="model">data.data_load</field>
+      <field name="arch" type="xml">
+        <search string="Busqueda en general">
+          <field name="name"/>
+          <field name="imel" string="IMEI/serie"/>
+          <field name="create_date"/>
+        </search>
+      </field>
+    </record>
+
+  </data>
+</odoo>

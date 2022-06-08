@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+
+        <record id="easy_subscription_invoicement.view_partner_fiscal_information_form" model="ir.ui.view">
+            <field name="name">easy_subscription_invoicement.view.partner.fiscal.information.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//page" position="after">
+                    <page string="Fiscal Information">
+                        <group name="group_top">
+                            <field name="usage" />
+                            <field name="payment_policy"/>
+                            <field name="method_id" />
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

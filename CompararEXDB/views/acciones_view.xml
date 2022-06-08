@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+    <!--accione principales-->
+    <!-- <record model="ir.actions.act_window" id="comparar_data_odoo">
+     <field name="name">Comparar datos</field>
+     <field name="res_model">data.data_load</field>
+     <field name="view_mode">tree</field>
+   </record> -->
+
+   <!-- <record model="ir.actions.act_window" id="action_odoo_data">
+       <field name="name">Diferencia en odoo</field>
+       <field name="res_model">data.odoo</field>
+       <field name="view_type">form</field>
+       <field name="view_mode">tree</field>
+   </record>
+
+   <record model="ir.actions.act_window" id="Caction_excel_data">
+       <field name="name">Diferencia en excel</field>
+       <field name="res_model">data.plataforma</field>
+       <field name="view_type">form</field>
+       <field name="view_mode">tree</field>
+   </record>
+ -->
+
+  </data>
+</odoo>

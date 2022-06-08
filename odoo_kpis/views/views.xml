@@ -1,0 +1,355 @@
+<odoo>
+    <data>        
+
+        <!-- Vista Form -->
+        <record id="view_odoo_kpis_crm_form" model="ir.ui.view">
+            <field name="name">view.odoo.kpis.crm.form</field>
+            <field name="model">odoo_kpis.crm</field>
+            <field name="arch" type="xml">
+                <form string="KPIs CRM">
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="name"/>
+                                <field name="op_cotizaciones_cuu" widget="gauge" style="width:120px;height:90px;cursor:pointer;" >.:.</field>
+                                <field name="op_cotizaciones_cdmx" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <field name="op_cerca_cierre" widget="gauge" style="width:120px;height:90px;cursor:pointer;" >.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_crm_1" icon="fa-list">
+                                        Detalle Cerca del Cierre
+                                    </button>
+                                </div>
+
+                                <field name="op_proceso" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_crm_2" icon="fa-list">
+                                        Detalle Contratos en Proceso
+                                    </button>
+                                </div>
+
+                                <field name="op_presentado" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_crm_3" icon="fa-list">
+                                        Detalle Contratos Presentados
+                                    </button>
+                                </div>
+
+
+                                <field name="op_fecha_ratificacion" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_crm_4" icon="fa-list">
+                                        Detalle con Fecha de Ratificación
+                                    </button>
+                                </div>
+
+                            </group>
+                        
+                            <group name="group_right">
+                                <field name="op_ratificado" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_crm_5" icon="fa-list">
+                                        Detalle Contratos Ratificados
+                                    </button>
+                                </div>
+
+                                <field name="op_fecha_colocacion" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_crm_6" icon="fa-list">
+                                        Detalle con Fecha de Colocación
+                                    </button>
+                                </div>
+
+
+                                <field name="op_por_colocar"  widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_crm_7" icon="fa-list">
+                                        Detalle Brazaletes por Colocar
+                                    </button>
+                                </div>
+
+                                <field name="op_instalados" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_crm_8" icon="fa-list">
+                                        Detalle Brazaletes Instalados
+                                    </button>
+                                </div>
+
+                                <field name="op_desinstalados"  widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <field name="op_abogados"  widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Vista tree -->
+        <record id="view_odoo_kpis_crm_tree" model="ir.ui.view">
+            <field name="name">view.odoo.kpis.crm.tree</field>
+            <field name="model">odoo_kpis.crm</field>
+            <field name="arch" type="xml">
+                <tree string="KPIs CRM">
+                    <field name="name"/>
+                    <field name="op_instalados"/>
+                    <field name="op_por_colocar"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_odoo_kpis_crm_view" model="ir.actions.act_window">
+            <field name="name">KPIs Ventas Brazaletes OP</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">odoo_kpis.crm</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    KPIs Ventas OP
+                </p>
+                <p>
+                    Clic 'Nuevo' para añadir nuevos elementos
+                </p>
+            </field>
+        </record>
+
+
+<!-- KPIS Ingeniería -->
+
+        <!-- Vista Form -->
+        <record id="view_odoo_kpis_ing_form" model="ir.ui.view">
+            <field name="name">view.odoo.kpis.ing.form</field>
+            <field name="model">odoo_kpis.ing</field>
+            <field name="arch" type="xml">
+                <form string="KPIs Ingeniería">
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="name"/>
+                                <field name="ing_paq_completos_cuu" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_ing_1" icon="fa-list">
+                                        Detalle Paquetes Completos Chihuahua
+                                    </button>
+                                </div>
+
+                                <field name="ing_paq_completos_cdmx" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_ing_2" icon="fa-list">
+                                        Detalle Paquetes Completos CDMX
+                                    </button>
+                                </div>
+
+                                <field name="ing_smart_tag_sueltos" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_ing_3" icon="fa-list">
+                                        Detalle Smart Tag sueltos
+                                    </button>
+                                </div>
+
+                            </group>
+                        
+                            <group name="group_right">
+                                <field name="ing_sim_gurtam_activos" widget="gauge" style="width:120px;height:90px;cursor:pointer;"></field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_ing_4" icon="fa-list">
+                                        Detalle Gurtam activos
+                                    </button>
+                                </div>
+
+                                <field name="ing_sim_disponibles_inventario" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_ing_5" icon="fa-list">
+                                        Detalle SIM disponibles
+                                    </button>
+                                </div>
+
+                                <field name="ing_sim_inventario_telcel" widget="gauge" style="width:120px;height:90px;cursor:pointer;">.:.</field>
+                                <div name="button_box" position="inside">
+                                    <button class="oe_stat_button" type="object" name="get_ing_6" icon="fa-list">
+                                        Detalle SIM inventario Telcel
+                                    </button>
+                                </div>
+
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Vista tree -->
+        <record id="view_odoo_kpis_ing_tree" model="ir.ui.view">
+            <field name="name">view.odoo.kpis.ing.tree</field>
+            <field name="model">odoo_kpis.ing</field>
+            <field name="arch" type="xml">
+                <tree string="KPIs Ingeniería">
+                    <field name="name"/>
+                    <field name="ing_paq_completos_cuu"/>
+                    <field name="ing_paq_completos_cdmx"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_odoo_kpis_ing_view" model="ir.actions.act_window">
+            <field name="name">KPIs Ingeniería</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">odoo_kpis.ing</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    KPIs Ingeniería
+                </p>
+                <p>
+                    Clic 'Nuevo' para añadir nuevos elementos
+                </p>
+            </field>
+        </record>
+
+<!-- Termina KPIS Ingeniería -->
+
+
+<!-- Detalle de Cerca del Cierre -->
+
+<!-- Vista tree -->
+
+<record id="action_odoo_kpis_crm_leads_view" model="ir.actions.act_window">
+    <field name="name">CRM</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">crm.lead</field>
+    <field name="view_mode">tree</field>
+    <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+            CRM
+        </p>
+        <p>
+            Clic 'Nuevo' para añadir nuevos elementos
+        </p>
+    </field>
+</record>
+
+<!-- Termina Detalle de Cerca del Cierre -->
+
+
+
+
+
+<!-- Proyectado -->
+
+        <!-- Vista Form -->
+        <record id="view_odoo_kpis_proyectado_form" model="ir.ui.view">
+            <field name="name">view.odoo.kpis.proyectado.form</field>
+            <field name="model">odoo_kpis.proyectado</field>
+            <field name="arch" type="xml">
+                <form string="Proyectado">
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="name"/>
+                                <field name="unidad_negocio"/>
+                                <field name="sem1"/>
+                                <field name="sem2"/>
+                                <field name="sem3"/>
+                                <field name="sem4"/>
+
+                                <field name="mes1"/>
+                                <field name="mes2"/>
+                                <field name="mes3"/>
+                                <field name="mes4"/>
+                                <field name="mes5"/>
+                                <field name="mes6"/>
+                            </group>
+                        
+                            <group name="group_right">
+                                <field name="mes7"/>
+                                <field name="mes8"/>
+                                <field name="mes9"/>
+                                <field name="mes10"/>
+                                <field name="mes11"/>
+                                <field name="mes12"/>
+
+                                <field name="proyectado"/>
+                                <field name="real"/>
+                                <field name="cobranza"/>
+                                <field name="ingreso"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Vista tree -->
+        <record id="view_odoo_kpis_proyectado_tree" model="ir.ui.view">
+            <field name="name">view.odoo.kpis.proyectado.tree</field>
+            <field name="model">odoo_kpis.proyectado</field>
+            <field name="arch" type="xml">
+                <tree string="Proyectado">
+                    <field name="unidad_negocio"/>
+                    <field name="sem1"/>
+                    <field name="sem2"/>
+                    <field name="sem3"/>
+                    <field name="sem4"/>
+                    <field name="mes1"/>
+                    <field name="mes2"/>
+                    <field name="mes3"/>
+                    <field name="mes4"/>
+                    <field name="mes5"/>
+                    <field name="mes6"/>
+                    <field name="mes7"/>
+                    <field name="mes8"/>
+                    <field name="mes9"/>
+                    <field name="mes10"/>
+                    <field name="mes11"/>
+                    <field name="mes12"/>
+                    <field name="proyectado"/>
+                    <field name="real"/>
+                    <field name="cobranza"/>    
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_odoo_kpis_proyectado_view" model="ir.actions.act_window">
+            <field name="name">Proyectado</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">odoo_kpis.proyectado</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Proyectado
+                </p>
+                <p>
+                    Clic 'Nuevo' para añadir nuevos elementos
+                </p>
+            </field>
+        </record>
+
+<!-- Termina Proyectado -->
+
+
+        <!-- Menú item superior -->
+        <menuitem name="KPIs" id="odoo_kpis_menu_root" sequence="10"
+            web_icon="odoo_kpis,static/description/icon.png"/> 
+
+        <!-- Categorías de menú -->
+        <menuitem name="Categorías" id="odoo_kpis_categ" parent="odoo_kpis_menu_root" sequence="0"/>
+
+        <menuitem name="Finanzas" id="odoo_kpis_finanzas" parent="odoo_kpis_menu_root" sequence="5"/>
+
+        <!-- Acciones del menú --> 
+        <menuitem name="Ventas Brazaletes OP" id="odoo_kpis_crm" parent="odoo_kpis_categ"
+                  sequence="0" action="action_odoo_kpis_crm_view"/> 
+
+        <menuitem name="Ingeniería" id="odoo_kpis_ing" parent="odoo_kpis_categ"
+                  sequence="0" action="action_odoo_kpis_ing_view"/> 
+
+        <menuitem name="Proyectado" id="odoo_kpis_proyectado" parent="odoo_kpis_finanzas"
+                  sequence="0" action="action_odoo_kpis_proyectado_view"/> 
+
+    </data>
+</odoo>

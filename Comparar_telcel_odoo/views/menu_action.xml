@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <menuitem
+     name="SIM"
+     id="base_menu_telcel_gps"
+     parent="gpsmonitor.main_menu_gps"
+     action="Comparar_telcel_odoo.cmp_telcel"
+     />
+
+     <menuitem
+      name="Consumo"
+      id="base_menu_carga_telcel_gps"
+      parent="base_menu_telcel_gps"
+      action="Comparar_telcel_odoo.cmp_telcel"
+      />
+
+      <menuitem
+        name="Cargar Numeros de SIM"
+        id="base_telcel_numeros_tlb"
+        parent="base_menu_telcel_gps"
+        action="Comparar_telcel_odoo.cmp_telcel_numeros"
+        sequence="3"/>
+
+      <menuitem
+        name="Datos de Excel"
+        id="base_telcel_comparar_tlb"
+        parent="base_menu_telcel_gps"
+        action="Comparar_telcel_odoo.cmp_telcel_telcel"
+        sequence="4"/>
+
+        <menuitem
+          name="Datos de Odoo"
+          id="base_odoo_comparar_tlb"
+          parent="base_menu_telcel_gps"
+          action="Comparar_telcel_odoo.cmp_telcel_odoo"
+          sequence="5"/>
+
+
+  </data>
+</odoo>

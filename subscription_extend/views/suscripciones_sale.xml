@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <!-- Inherit Subscription Tree view -->
+    <record id="sale_subscription_description_view_list" model="ir.ui.view">
+        <field name="name">sale.subscription.description.tree</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="sale_subscription.sale_subscription_view_list"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="line_description"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="action_update_gps_document" model="ir.actions.server">
+        <field name="name">Actualizar documentos GPS</field>
+        <field name="model_id" ref="model_sale_subscription"/>
+        <field name="binding_model_id" ref="model_sale_subscription"/>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    action = records.update_gps_documents()
+        </field>
+    </record>
+
+  </data>
+</odoo>

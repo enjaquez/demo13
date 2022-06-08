@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_data_data_load,data.data_load,model_data_data_load,,1,1,1,1
+access_data_odoo,data.odoo,model_data_odoo,,1,1,1,1
+access_data_plataforma,data.plataforma,model_data_plataforma,,1,1,1,1
+access_estadisticas_data_load,estadisticas.data_load,model_estadisticas_data_load,,1,1,1,1

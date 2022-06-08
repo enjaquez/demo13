@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="wizard_form_compara" >
+    <field name="name">wizard form comparar</field>
+    <field name="model">comparar.data.load</field>
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+      <form string="winzard compara">
+          <sheet>
+            <h5>Cuando se presiona comparar  Odoo datos se busca y actualiza la infomacion de odoo comparada con la plataforma o Excel y se obtiene las diferencias de Excel a odoo</h5>
+            <h5>Cuando se presiona Excel datos se obtiene las diferencias  de odoo con la plataforma</h5>
+            <h5>para finalizar se borrar la infomacion cargada en odoo</h5>
+          </sheet>
+          <footer>
+            <button name="compara" string="Comparar Odoo datos"  type="object" class="btn btn-primary"/>
+            <button name="def_archi" string="Excel datos"  type="object" class="btn btn-primary"/>          
+            <button name="borrar" string="Borrar datos"  type="object" class="btn btn-primary"/>
+            <button string="Cancelar" special="cancel"  />
+           </footer>
+      </form>
+     </field>
+   </record>
+
+   <!--accion para ventana modal-->
+   <record id="accion_compara" model="ir.actions.act_window">
+     <field name="name">Menu Flotante</field>
+     <field name="res_model">comparar.data.load</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="wizard_form_compara"/>
+     <field name="target">new</field>
+  </record>
+
+   <menuitem
+   action="accion_compara"
+   id="id_compara"
+    parent="base_comparar_data"
+   sequence="1"
+   />
+
+  </data>
+</odoo>

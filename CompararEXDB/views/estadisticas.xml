@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+  	<!--Tree-->
+    <record id="estadistico_data_tree"   model="ir.ui.view">
+        <field name="name">estadistico.data.tree</field>
+        <field name="model">estadisticas.data_load</field>
+        <field name="code">seq.seq</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                 <field name="cantidad_act"/>
+                 <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+     <!--form-->
+    <record id="estadistico_data_form" model="ir.ui.view">
+  <field name="name">estadistico.data.form</field>
+  <field name="model">estadisticas.data_load</field>
+  <field name="arch" type="xml">
+            <form>
+              <sheet>
+                <group>
+                  <field name="cantidad_act"/>
+                  <field name="create_date"/>
+               </group>
+               </sheet>
+            </form>
+        </field>
+ </record>
+
+    <record model="ir.ui.view" id="estadisticas_data_search">
+      <field name="name">estadisticas_data.search</field>
+      <field name="model">estadisticas.data_load</field>
+      <field name="arch" type="xml">
+        <search string="Busqueda en estadisticas">
+          <field name="cantidad_act"/>          
+          <field name="create_date"/>
+        </search>
+      </field>
+    </record>
+
+  </data>
+</odoo>

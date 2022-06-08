@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="wizard_form_odoo_telcel_odoo" >
+    <field name="name">wizard form telcel odoo</field>
+    <field name="model">menu_wizard.odoo_telcel</field>
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+      <form string="winzard telcel comparar">
+        <sheet>
+          <group>
+            <h5>
+               Telcel: Datos de odoo no en telcel
+            </h5>
+            <h5>
+               odoo: Datos de telcel no no odoo
+            </h5>
+            <h5>
+               borrar datos: cargar nueva fuente de dato
+            </h5>
+          </group>
+        </sheet>
+      <footer>
+          <button name="action_telcel" string="Telcel"  type="object" class="btn btn-primary"/>
+          <button name="action_odoo" string="Odoo"  type="object" class="btn btn-primary"/>
+          <button name="action_limpiar_caraga" string="Barrar datos"  type="object" class="btn btn-primary"/>
+          <button string="Cancela" special="cancel"/>
+       </footer>
+      </form>
+     </field>
+   </record>
+
+   <!--accion para comparar-->
+   <record id="accion_form_wizard_telcel" model="ir.actions.act_window">
+     <field name="name">Telcel vs Odoo</field>
+     <field name="res_model">menu_wizard.odoo_telcel</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="wizard_form_odoo_telcel_odoo"/>
+     <field name="target">new</field>
+  </record>
+
+  <menuitem
+    name="Comparar"
+    id="base_comparar_tlb"
+    parent="base_menu_telcel_gps"
+    action="Comparar_telcel_odoo.accion_form_wizard_telcel"
+    sequence="2"/>
+
+  </data>
+</odoo>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="view_crm_goal_form" model="ir.ui.view">
+            <field name="name">crm.goal.form</field>
+            <field name="model">crm.goal</field>
+            <field name="arch" type="xml">
+                <form string="CRM Goal">
+                  <sheet>
+                    <group>
+                      <group>
+                        <field name="year"/>
+                      </group>
+                    </group>
+                    <group>
+                      <field name="goal_ids" nolabel="1">
+                        <tree editable="bottom">
+                          <field name="name" readonly="1" force_save="1"/>
+                          <field name="goal"/>
+                        </tree>
+                      </field>
+                    </group>
+                  </sheet>
+               </form>
+            </field>
+        </record>
+
+        <record id="view_crm_goal_tree" model="ir.ui.view">
+            <field name="name">crm.goal.form</field>
+            <field name="model">crm.goal</field>
+            <field name="arch" type="xml">
+            	<tree string="CRM Goal">
+            		<field name="year"/>
+            	</tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_crm_goal">
+	        <field name="name">CRM Goals</field>
+	        <field name="res_model">crm.goal</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+  		</record>
+
+		<!--menu Configuration-->
+		 <menuitem
+		 	name="Configuration"
+		 	id="kpi_config"
+		 	parent="gpskpi.main_menu_kpi"/>
+
+		<!--menu CRM Goal-->
+		 <menuitem
+		 	name="CRM Goal"
+		 	id="crm_goal_config"
+		 	parent="kpi_config"
+		 	action="gpskpi.action_crm_goal"/>
+	</data>
+</odoo>

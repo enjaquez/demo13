@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+
+        <!-- Extended form view -->
+        <record id="easy_subscription_invoicement.subscription_form_view" model="ir.ui.view">
+            <field name="name">easy_subscription_invoicement.subscription.form.view</field>
+            <field name="model">sale.subscription</field>
+            <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//button" position="before">
+                    <button name="action_calculate_next_payment_date" type="object" string="Calculate next payment date" />
+                </xpath>
+                <xpath expr="//field[@name='to_renew']" position="before">
+                    <field name="next_payment_date" />
+                </xpath>
+                <field name="date_start" position="after">
+                    <field name="payment_term_id"/>
+                </field>
+            </field>
+        </record>
+
+
+        <!-- Extended list view -->
+        <record id="easy_subscription_invoicement.sale_subscription_view_list_ext" model="ir.ui.view">
+            <field name="name">easy_subscription_invoicement.sale.subscription.view.list.ext</field>
+            <field name="model">sale.subscription</field>
+            <field name="inherit_id" ref="sale_subscription.sale_subscription_view_list" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='recurring_next_date']" position="after">
+                    <field name="next_payment_date" />
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Excel Report -->
+        <report
+            id="subscription_xlsx"
+            model="sale.subscription"
+            string="Export as XLSX"
+            report_type="xlsx"
+            name="easy_subscription_invoicement.subscriptions_xlsx"
+            file="subscriptions_xlsx"
+            attachment_use="False"
+        />
+
+    </data>
+</odoo>

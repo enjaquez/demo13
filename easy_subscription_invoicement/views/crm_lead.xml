@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <!-- Excel Report -->
+        <report
+            id="lead_xlsx"
+            model="crm.lead"
+            string="Export as XLSX"
+            report_type="xlsx"
+            name="easy_subscription_invoicement.lead_xlsx"
+            file="lead_xlsx"
+            attachment_use="False"
+        />
+    </data>
+</odoo>

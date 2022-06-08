@@ -1,0 +1,9 @@
+1 Activar la facturacion electronica
+2 Si al intalara manda un error comentar en el manifest el llamado de ir.model.access.csv
+  y hacer lo siguiente
+  agregar derechos al modelo nuevo en
+  tecnico->permisos de acceso
+  modelo  invoice.type.pag
+4 recargar odoo
+5 Agregar metodo de pago PPD etc: Crear un factura y agregalos en esa parte
+6 Configurar los cliente con los dato de venta pedido
